@@ -4,7 +4,7 @@ public class Assignment1098
 	{
 		double max = 3.0;
 		double min = 1.0;
-		for (double i = 0.0d; i <= 2.0d; i += 0.20d)
+		for (double i = 0.0; i <= 2.0; i += 0.2d)
 		{
 			for (double j = min; j <= max; j += 1.0)
 			{
@@ -14,7 +14,11 @@ public class Assignment1098
 				}
 				else
 				{
-					System.out.printf("I=%.1f", i);
+					if(Math.round(i * 100.0) / 100.0 == 2.0){
+						System.out.print("I=2");
+					}else{
+						System.out.printf("I=%.1f", i);
+					}
 				}
 
 				if ((j + i) % 1 == 0)
