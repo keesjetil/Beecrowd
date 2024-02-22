@@ -5,18 +5,32 @@ public class Assignment1164 {
         Scanner sc = new Scanner(System.in);
         var N = sc.nextInt();
         for(int i=0; i<N; i++){
-            int x = sc.nextInt();
-            int sum = 0;
-            for(int j=1; j<=x/2; j++) {
-                if(x%j == 0){
-                    sum += j;
+            var sum = 0;
+            var Y = sc.next();
+            for(int j = 0; j< Y.length(); j++){
+                char c = Y.charAt(j);
+                switch (c){
+                    case '1':
+                        sum += 2;
+                        break;
+                    case '2','3','5':
+                        sum += 5;
+                        break;
+                    case '4':
+                        sum += 4;
+                        break;
+                    case '0','6','9':
+                        sum += 6;
+                        break;
+                    case '7':
+                        sum += 3;
+                        break;
+                    case '8':
+                        sum += 7;
+                        break;
                 }
             }
-            if(sum == x){
-                System.out.printf("%d eh perfeito%n",x);
-            }else {
-                System.out.printf("%d nao eh perfeito%n", x);
-            }
+            System.out.printf("%d leds%n",sum);
         }
     }
 }
