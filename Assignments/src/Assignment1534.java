@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Assignment1534 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        while(true){
-            var N = scn.nextInt();
+        while(scn.hasNextLine()){
+            var N = Integer.parseInt(scn.nextLine());
             int[][] arr = threes(N);
             for (int i = 0; i < N; i++) {
                 arr[i][i] = 1;
